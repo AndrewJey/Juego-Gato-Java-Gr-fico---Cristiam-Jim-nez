@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Gato.Logica;
+package gato.Logica;
 
 import gato.IU.Frm_Jugando;
 import java.sql.Statement;

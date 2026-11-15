@@ -90,3 +90,8 @@ local.properties
 *.iml
 .local-build/
 # local-development:end
+
+# Partidas y estadísticas locales
+/gato/data/
+*.mv.db
+*.trace.db

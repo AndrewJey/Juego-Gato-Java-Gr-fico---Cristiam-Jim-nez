@@ -22,7 +22,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Gato.Logica.Jugadores_1&gt;"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;gato.Logica.Jugadores_1&gt;"/>
       </AuxValues>
     </Component>
   </NonVisualComponents>

@@ -150,7 +150,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Gato.Logica.Jugadores_1&gt;"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;gato.Logica.Jugadores_1&gt;"/>
       </AuxValues>
     </Component>
     <Component class="javax.persistence.Query" name="jugadores_1Query1">
@@ -168,7 +168,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Gato.Logica.Jugadores_1&gt;"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;gato.Logica.Jugadores_1&gt;"/>
       </AuxValues>
     </Component>
   </NonVisualComponents>

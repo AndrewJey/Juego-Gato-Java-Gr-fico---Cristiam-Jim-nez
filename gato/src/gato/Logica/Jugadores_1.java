@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Gato.Logica;
+package gato.Logica;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -22,7 +22,7 @@ import javax.persistence.Transient;
  * @author Cristiam
  */
 @Entity
-@Table(name = "Jugadores", catalog = "Gato", schema = "dbo")
+@Table(name = "Jugadores", schema = "dbo")
 @NamedQueries({
     @NamedQuery(name = "Jugadores_1.findAll", query = "SELECT j FROM Jugadores_1 j"),
     @NamedQuery(name = "Jugadores_1.findByIDJugador", query = "SELECT j FROM Jugadores_1 j WHERE j.iDJugador = :iDJugador"),

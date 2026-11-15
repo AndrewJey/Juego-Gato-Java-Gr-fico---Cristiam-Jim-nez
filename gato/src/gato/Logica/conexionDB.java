@@ -1,7 +1,6 @@
 
-package Gato.Logica;
+package gato.Logica;
 
-import com.sun.jndi.cosnaming.CNCtx;
 import gato.IU.Frm_Jugando;
 import gato.IU.Frm_NuevoJuego;
 import java.sql.*;
@@ -27,14 +26,11 @@ public class conexionDB {
     public void conexionDB() {
 
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            this.Con = DriverManager.getConnection("jdbc:sqlserver://JIMENEZ;" + "database = Gato;" + "user = sa;" + "password = Cessna123");
+            this.Con = LocalDatabase.open();
             this.st = Con.createStatement();
         } catch (SQLException e1) {
             JOptionPane.showMessageDialog(null, "ERROR SQL:" + e1.getMessage());
 
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(conexionDB.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

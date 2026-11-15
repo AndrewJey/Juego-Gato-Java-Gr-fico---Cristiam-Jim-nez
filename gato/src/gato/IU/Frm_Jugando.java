@@ -1,8 +1,8 @@
 
 package gato.IU;
 
-import Gato.Logica.Gato_Metodos;
-import Gato.Logica.conexionDB;
+import gato.Logica.Gato_Metodos;
+import gato.Logica.conexionDB;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 

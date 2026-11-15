@@ -28,7 +28,7 @@ public class Frm_ListaJugadores extends javax.swing.JInternalFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("JIMENEZ:1433;databaseName=GatoPU").createEntityManager();
+        entityManager = java.beans.Beans.isDesignTime() ? null : gato.Logica.LocalDatabase.entityManager();
         jugadores_1Query = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT j FROM Jugadores_1 j");
         jugadores_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : jugadores_1Query.getResultList();
         jPanel1 = new javax.swing.JPanel();
@@ -96,7 +96,7 @@ public class Frm_ListaJugadores extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private java.util.List<Gato.Logica.Jugadores_1> jugadores_1List;
+    private java.util.List<gato.Logica.Jugadores_1> jugadores_1List;
     private javax.persistence.Query jugadores_1Query;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables

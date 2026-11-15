@@ -1,7 +1,7 @@
 
 package gato.IU;
 
-import Gato.Logica.Gato_Metodos;
+import gato.Logica.Gato_Metodos;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -33,7 +33,7 @@ public class Frm_NuevoJuego extends javax.swing.JInternalFrame {
         Lb_rifa1 = new javax.swing.JLabel();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("JIMENEZ:1433;databaseName=GatoPU").createEntityManager();
+        entityManager = java.beans.Beans.isDesignTime() ? null : gato.Logica.LocalDatabase.entityManager();
         jugadores_1Query = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT j FROM Jugadores_1 j");
         jugadores_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : jugadores_1Query.getResultList();
         jugadores_1Query1 = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT j FROM Jugadores_1 j");
@@ -451,8 +451,8 @@ public class Frm_NuevoJuego extends javax.swing.JInternalFrame {
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private java.util.List<Gato.Logica.Jugadores_1> jugadores_1List;
-    private java.util.List<Gato.Logica.Jugadores_1> jugadores_1List1;
+    private java.util.List<gato.Logica.Jugadores_1> jugadores_1List;
+    private java.util.List<gato.Logica.Jugadores_1> jugadores_1List1;
     private javax.persistence.Query jugadores_1Query;
     private javax.persistence.Query jugadores_1Query1;
     private javax.swing.JLabel lb_Ficha1;
