@@ -10,7 +10,7 @@ Puedes abrir este repositorio en VS Code, Antigravity o Sublime Text. El compila
 En NetBeans 25, abre la carpeta que contiene `build.xml` como proyecto Ant. Selecciona un JDK igual o posterior al nivel de fuente del proyecto; las compilaciones de esta revisión usan JDK 24.0.2. El asistente busca NetBeans y el JDK y mantiene la configuración de usuario en `.local-build/`.
 
 ```powershell
-.uild-local.ps1
+.\build-local.ps1
 .\build-local.ps1 -Project 'gato/build.xml' -Target run
 ```
 
@@ -56,3 +56,10 @@ Alcance pendiente:
 - Los datos locales nuevos se guardan en gato/data. No se migró automáticamente la antigua base SQL Server ni se comprobó cada secuencia posible de juego.
 
 <!-- build-repairs-20261115:end -->
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación — 2026-11-19 (Validación de jugadas, detección de empates y reinicio en Gato_Metodos)
+
+- Añadidos `colocarFicha(casilla, jugador)` (validando rango 1..9, jugador válido, casilla libre y fin de partida), `esEmpate()` y `reiniciarTablero()` en `gato.Logica.Gato_Metodos`.
+- Validación: compilación JDK 17 del proyecto completo y 17 aserciones automatizadas de reglas, victoria y empate.
+<!-- improvements-20261119:end -->

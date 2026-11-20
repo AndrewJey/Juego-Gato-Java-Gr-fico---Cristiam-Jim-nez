@@ -76,13 +76,49 @@ public class Gato_Metodos {
      * @return
      */
     public boolean TableroLleno() {
-        boolean resultado = true;
         for (int i = 1; i < tablero.length; i++) {
             if (tablero[i] == 0) {
-                resultado = false;
+                return false;
             }
         }
-        return resultado;
+        return true;
+    }
+
+    /**
+     * Indica si la partida terminó en empate (tablero lleno sin ganador).
+     */
+    public boolean esEmpate() {
+        return TableroLleno() && verificar() == 0;
+    }
+
+    /**
+     * Coloca una ficha validando límites [1..9], jugador válido y casilla libre.
+     */
+    public boolean colocarFicha(int casilla, int jugador) {
+        if (casilla < 1 || casilla >= tablero.length) {
+            return false;
+        }
+        if (jugador != JUGADOR1 && jugador != JUGADOR2) {
+            return false;
+        }
+        if (tablero[casilla] != 0 || Termino) {
+            return false;
+        }
+        tablero[casilla] = jugador;
+        if (verificar() != 0 || TableroLleno()) {
+            Termino = true;
+        }
+        return true;
+    }
+
+    /**
+     * Reinicia el estado del tablero para una nueva partida.
+     */
+    public void reiniciarTablero() {
+        java.util.Arrays.fill(tablero, 0);
+        Termino = false;
+        TurnoJ1 = true;
+        TurnoJ2 = false;
     }
 /*
  * Verifica si en el arreglo del table hay un 1 o 2 de ser asi significa que hay una partida iniciada
